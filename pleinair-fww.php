@@ -3,7 +3,7 @@
  * Plugin Name: Plein Air Archive - Customizations
  * Plugin URI: https://pandabrand.net
  * Description: Customizations for the Plein Air CMS site
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Frederick Wells
  * Author URI: https://pandabrand.net
  * Text Domain: pleinair-cms

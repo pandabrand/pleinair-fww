@@ -1,0 +1,11 @@
+{
+    "name": "frederickwells/pleinair-fww",
+    "type": "wordpress-plugin",
+    "license": "GPL-3",
+    "authors": [
+        {
+            "name": "pandabrand",
+            "email": "pandabrand@gmail.com"
+        }
+    ]
+}
