@@ -2,6 +2,7 @@
     "name": "frederickwells/pleinair-fww",
     "type": "wordpress-plugin",
     "license": "GPL-3",
+    "homepage": "https://github.com/pandabrand/pleinair-fww.git",
     "authors": [
         {
             "name": "pandabrand",

@@ -3,7 +3,7 @@
  * Plugin Name: Plein Air Archive - Customizations
  * Plugin URI: https://pandabrand.net
  * Description: Customizations for the Plein Air CMS site
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Frederick Wells
  * Author URI: https://pandabrand.net
  * Text Domain: pleinair-cms
@@ -29,6 +29,7 @@ register_activation_hook(__FILE__, 'plugin_run_init');
 
 function plugin_run_init()
 {
+    setup_constants();
     run_filters();
 }
 
@@ -39,6 +40,37 @@ function run_filters()
 
 function Pap_ACF_JSON_save($path)
 {
-    $path = get_stylesheet_directory() . '/acf';
+    $path = PLEINAIR_FWW_PLUGIN_DIR . '/acf';
     return $path;
+}
+
+
+/**
+ * Setup plugin constants.
+ *
+ * @access private
+ * @since  0.0.1
+ * @return void
+ */
+function setup_constants()
+{
+    // Plugin version.
+    if (! defined('PLEINAIR_FWW_VERSION')) {
+        define('PLEINAIR_FWW_VERSION', '0.0.3');
+    }
+
+    // Plugin Folder Path.
+    if (! defined('PLEINAIR_FWW_PLUGIN_DIR')) {
+        define('PLEINAIR_FWW_PLUGIN_DIR', plugin_dir_path(__FILE__));
+    }
+
+    // Plugin Folder URL.
+    if (! defined('PLEINAIR_FWW_PLUGIN_URL')) {
+        define('PLEINAIR_FWW_PLUGIN_URL', plugin_dir_url(__FILE__));
+    }
+
+    // Plugin Root File.
+    if (! defined('PLEINAIR_FWW_PLUGIN_FILE')) {
+        define('PLEINAIR_FWW_PLUGIN_FILE', __FILE__);
+    }
 }
